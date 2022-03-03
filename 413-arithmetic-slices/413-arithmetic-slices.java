@@ -1,9 +1,10 @@
 class Solution {
     public int numberOfArithmeticSlices(int[] nums) {
         
-     
-           var slices = 0;
-	           for (int i = 2, prev = 0; i < nums.length; i++){
+           int slices = 0;
+           int prev = 0;
+    
+	           for (int i = 2; i < nums.length; i++){
                    if (nums[i] - nums[i - 1] == nums[i - 1] - nums[i - 2]) {
 	                    prev = prev + 1;
 	                    slices = slices + prev;
@@ -12,15 +13,7 @@ class Solution {
                    }
                }
 		
-	return slices;
-        
-        
-        
-        
-        
-        
-        
-        
+	return slices;      
         
     }
 }
