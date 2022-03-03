@@ -1,6 +1,10 @@
 class Solution {
     public int numberOfArithmeticSlices(int[] nums) {
         
+        if(nums.length<2){
+            return 0;
+        }
+        
            int slices = 0;
            int prev = 0;
     
