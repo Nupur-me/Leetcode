@@ -10,6 +10,6 @@ class Solution {
         }
         }
    
-       return minHeap.remove(); 
+       return minHeap.poll(); 
     }
 }
