@@ -2,15 +2,17 @@ class Solution {
     public List<Integer> findDuplicates(int[] nums) {
         
         int length = nums.length;
-        HashSet<Integer> set = new HashSet<>();
-        Arrays.sort(nums);
-        for(int i = 1; i< length;i++){
-            if(nums[i] == nums[i-1]){
-                set.add(nums[i]);
+        HashMap<Integer,Integer> set = new HashMap<>();
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        for(int i = 0; i< length;i++){
+            if(set.containsKey(nums[i])){
+                list.add(nums[i]);
             }
             
+            set.put(nums[i],i);
+            
         }
-        ArrayList<Integer> list = new ArrayList<Integer>(set);
+        
         return list;
     }
 }
