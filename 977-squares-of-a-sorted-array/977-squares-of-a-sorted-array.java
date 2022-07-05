@@ -12,12 +12,14 @@ class Solution {
             if(first>last){
                 ans[fill] = first;
                 i++;
+                 fill--;
             }
             else{
                 ans[fill] = last;
                 j--;
+                 fill--;
             }
-            fill--;
+           
         }
         
         return ans;
